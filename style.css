@@ -4,7 +4,7 @@ body {
 }
 .hero-bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("assets/home-bg-img.jpg");
+    url("assets/home-bg-img2.jpg");
   background-size: cover;
   background-position: center;
 }
