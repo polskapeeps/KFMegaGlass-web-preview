@@ -1,0 +1,31 @@
+body {
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+.hero-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://placehold.co/1920x1080/1A202C/FFFFFF?text=Modern+Glass+Installations");
+  background-size: cover;
+  background-position: center;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu {
+  display: none;
+}
+/* Custom scrollbar for better aesthetics in dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #2d3748; /* gray-800 */
+}
+::-webkit-scrollbar-thumb {
+  background: #4a5568; /* gray-600 */
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #718096; /* gray-500 */
+}
