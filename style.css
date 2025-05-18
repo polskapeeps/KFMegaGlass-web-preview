@@ -64,3 +64,10 @@ body {
 #mobile-products-button[aria-expanded='true'] svg {
   transform: rotate(180deg);
 }
+
+@media (max-width: 767px) {
+  /* Affects screens smaller than md breakpoint */
+  .hero-bg {
+    background-attachment: scroll; /* Or 'local', or just remove fixed */
+  }
+}
