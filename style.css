@@ -8,7 +8,7 @@ body {
 .hero-bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     /* Slightly darker overlay for better text contrast */
-      url('/assets/home-bg-img2.jpg'); /* Placeholder hero, replace with actual high-quality image */
+      url('assets/home-bg-img2.jpg'); /* Placeholder hero, replace with actual high-quality image */
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Adds a subtle parallax-like effect */
