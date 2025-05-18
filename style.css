@@ -1,31 +1,66 @@
+/* Base body styles */
 body {
-  font-family: "Inter", sans-serif;
-  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif; /* Ensure Inter font is primary */
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
+
+/* Hero section background image with overlay */
 .hero-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("assets/home-bg-img2.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    /* Slightly darker overlay for better text contrast */
+      url('/assets/home-bg-img2.jpg'); /* Placeholder hero, replace with actual high-quality image */
   background-size: cover;
   background-position: center;
+  background-attachment: fixed; /* Adds a subtle parallax-like effect */
 }
+
+/* Desktop dropdown menu visibility on hover */
 .dropdown:hover .dropdown-menu {
   display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
 }
+
 .dropdown-menu {
-  display: none;
+  display: none; /* Hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px); /* Start slightly lower for animation */
 }
-/* Custom scrollbar for better aesthetics in dark mode */
+
+/* Custom scrollbar for Webkit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px; /* Slightly wider scrollbar */
+  height: 10px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #2d3748; /* gray-800 */
+  background: #1a202c; /* Even darker gray for track (gray-900 from Tailwind) */
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #4a5568; /* gray-600 */
-  border-radius: 4px;
+  background: #4a5568; /* gray-600 from Tailwind */
+  border-radius: 5px; /* Rounded scrollbar thumb */
+  border: 2px solid #1a202c; /* Creates a small border around thumb, matching track */
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #718096; /* gray-500 */
+  background: #718096; /* gray-500 from Tailwind */
+}
+
+/* Added for service card hover effect */
+.service-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for transform and shadow */
+}
+
+.service-card:hover {
+  transform: translateY(-8px); /* Lifts the card up slightly on hover */
+  /* The hover:shadow-blue-500/30 class from Tailwind will handle the shadow change */
+}
+
+/* Style for the mobile products dropdown arrow rotation */
+#mobile-products-button[aria-expanded='true'] svg {
+  transform: rotate(180deg);
 }
