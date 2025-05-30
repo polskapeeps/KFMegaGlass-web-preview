@@ -7,11 +7,10 @@ body {
 /* Hero section background image with overlay */
 .hero-bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-    /* Slightly darker overlay for better text contrast */
-      url('assets/hero/railings.jpg'); /* Keep your existing image, fallback added in HTML */
+    url('assets/hero/railings.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Adds a subtle parallax-like effect */
+  background-attachment: fixed;
 }
 
 /* Desktop dropdown menu visibility on hover */
@@ -124,7 +123,7 @@ body {
 @media (max-width: 767px) {
   /* Affects screens smaller than md breakpoint */
   .hero-bg {
-    background-attachment: scroll; /* Or 'local', or just remove fixed */
+    background-attachment: 'scroll'; /* Or 'local', or just remove fixed */
   }
 
   /* NEW: Better mobile spacing */
