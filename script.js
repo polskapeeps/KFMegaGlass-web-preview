@@ -5,18 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenu = document.getElementById("mobile-menu");
 
   // Mobile products dropdown toggle
-  const mobileProductsButton = document.getElementById(
-    "mobile-products-button"
-  );
+  const mobileProductsButton = document.getElementById("mobile-products-button");
   const mobileProductsMenu = document.getElementById("mobile-products-menu");
   const mobileProductsButtonSvg = mobileProductsButton
     ? mobileProductsButton.querySelector("svg")
     : null;
 
   // Desktop products dropdown toggle (for aria attributes, actual visibility is CSS driven)
-  const desktopProductsButton = document.getElementById(
-    "desktop-products-button"
-  );
+  const desktopProductsButton = document.getElementById("desktop-products-button");
   const desktopProductsMenu = document.getElementById("desktop-products-menu");
 
   if (mobileMenuButton && mobileMenu) {
@@ -74,8 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Need to handle focusout carefully to not close when focusing on menu items
       // A more robust solution might involve checking relatedTarget
-      const menuItems =
-        desktopProductsMenu.querySelectorAll('a[role="menuitem"]');
+      const menuItems = desktopProductsMenu.querySelectorAll('a[role="menuitem"]');
       const lastMenuItem = menuItems[menuItems.length - 1];
 
       if (lastMenuItem) {
@@ -147,5 +142,42 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     });
+  });
+
+  // NEW: Add subtle parallax effect to hero section
+  const heroSection = document.querySelector('.hero-bg');
+  if (heroSection) {
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * -0.5;
+      
+      // Only apply on larger screens to avoid performance issues on mobile
+      if (window.innerWidth > 768) {
+        heroSection.style.transform = `translateY(${rate}px)`;
+      }
+    });
+  }
+
+  // NEW: Add intersection observer for fade-in animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+
+  // Observe service cards and gallery items for fade-in effect
+  document.querySelectorAll('.service-card, .gallery-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    observer.observe(el);
   });
 });

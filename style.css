@@ -8,7 +8,7 @@ body {
 .hero-bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     /* Slightly darker overlay for better text contrast */
-      url('assets/home-bg-img2.jpg'); /* Placeholder hero, replace with actual high-quality image */
+      url('assets/home-bg-img2.jpg'); /* Keep your existing image, fallback added in HTML */
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Adds a subtle parallax-like effect */
@@ -20,7 +20,7 @@ body {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out; /* Faster transitions */
 }
 
 .dropdown-menu {
@@ -50,9 +50,9 @@ body {
   background: #718096; /* gray-500 from Tailwind */
 }
 
-/* Added for service card hover effect */
+/* Enhanced service card hover effect */
 .service-card {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for transform and shadow */
+  transition: all 0.3s ease-in-out; /* Smoother transition for all properties */
 }
 
 .service-card:hover {
@@ -65,9 +65,102 @@ body {
   transform: rotate(180deg);
 }
 
+/* NEW: Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* NEW: Floating animation for CTA button */
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* NEW: Gallery hover effects */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(59, 130, 246, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* NEW: Enhanced contact section */
+.contact-card {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile adjustments */
 @media (max-width: 767px) {
   /* Affects screens smaller than md breakpoint */
   .hero-bg {
     background-attachment: scroll; /* Or 'local', or just remove fixed */
   }
+  
+  /* NEW: Better mobile spacing */
+  .service-card {
+    padding: 1.5rem; /* Slightly less padding on mobile */
+  }
+  
+  .gallery-item img {
+    height: 16rem; /* Consistent height on mobile */
+  }
+}
+
+/* NEW: Enhanced transitions for better UX */
+a, button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* NEW: Focus states for accessibility */
+a:focus, button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* NEW: Improved hover states */
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* NEW: Better backdrop blur support */
+@supports (backdrop-filter: blur(10px)) {
+  .backdrop-blur-header {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+/* NEW: Enhanced shadow system */
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.shadow-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
 }
