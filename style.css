@@ -35,7 +35,7 @@ body {
   height: 100%;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   opacity: 0;
   transition: opacity 2s ease-in-out;
 }
@@ -62,7 +62,7 @@ body {
 }
 
 .hero-slide:nth-child(2) {
-  background-image: url('assets/hero/shower.jpg');
+  background-image: url('assets/hero/shower-5.jpg');
 }
 
 .hero-slide:nth-child(3) {
@@ -74,9 +74,8 @@ body {
 }
 
 .hero-slide:nth-child(5) {
-  background-image: url('assets/hero/shower-3.jpg');
+  background-image: url('assets/hero/balustrade.jpg');
 }
-
 /* Mobile adjustments */
 @media (max-width: 767px) {
   .hero-slide {
