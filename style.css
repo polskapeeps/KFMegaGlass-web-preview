@@ -8,7 +8,7 @@ body {
 .hero-bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     /* Slightly darker overlay for better text contrast */
-      url('assets/home-bg-img2.jpg'); /* Keep your existing image, fallback added in HTML */
+      url('assets/hero/railings.jpg'); /* Keep your existing image, fallback added in HTML */
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Adds a subtle parallax-like effect */
@@ -79,8 +79,13 @@ body {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /* NEW: Gallery hover effects */
@@ -121,24 +126,26 @@ body {
   .hero-bg {
     background-attachment: scroll; /* Or 'local', or just remove fixed */
   }
-  
+
   /* NEW: Better mobile spacing */
   .service-card {
     padding: 1.5rem; /* Slightly less padding on mobile */
   }
-  
+
   .gallery-item img {
     height: 16rem; /* Consistent height on mobile */
   }
 }
 
 /* NEW: Enhanced transitions for better UX */
-a, button {
+a,
+button {
   transition: all 0.2s ease-in-out;
 }
 
 /* NEW: Focus states for accessibility */
-a:focus, button:focus {
+a:focus,
+button:focus {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
