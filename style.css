@@ -58,15 +58,15 @@ body {
 
 /* Add your slide images here - easily customizable */
 .hero-slide:nth-child(1) {
-  background-image: url('assets/home-bg-img2.jpg'); /* Your existing image */
+  background-image: url('assets/hero/railings.jpg'); /* Your existing image */
 }
 
 .hero-slide:nth-child(2) {
-  background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+  background-image: url('assets/hero/shower.jpg');
 }
 
 .hero-slide:nth-child(3) {
-  background-image: url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+  background-image: url('assets/hero/shower-1.jpg');
 }
 
 .hero-slide:nth-child(4) {
