@@ -282,3 +282,233 @@ button:focus {
     letter-spacing: 0.5px; /* Slight letter spacing for clarity */
   }
 }
+/* ==================== BOTTOM SECTIONS UPGRADE ==================== */
+
+/* Make ALL sections match the hero's visual quality */
+
+/* About Section - Glass Card Styling */
+#about .glass-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+
+/* Services Section - Upgrade the Header */
+#services .glass-card-strong {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Service Cards - Make them glass AF */
+.service-card {
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4), 0 0 40px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Gallery Section - Match the premium look */
+#gallery .glass-card-strong {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Gallery Items - Enhanced glass effect */
+.gallery-item {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.gallery-item:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  transform: scale(1.03) rotate(0.5deg);
+  box-shadow: 0 25px 70px rgba(59, 130, 246, 0.2);
+}
+
+/* Remove that blue overlay we don't like */
+.gallery-item::after {
+  display: none !important;
+}
+
+/* Contact Section - Premium glass card */
+.contact-card {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4) !important;
+}
+
+#contact .glass-card-strong {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer - Glass treatment */
+footer {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ==================== VISUAL CONSISTENCY UPGRADES ==================== */
+
+/* Make all section backgrounds consistent */
+#about,
+#services,
+#gallery,
+#contact {
+  position: relative;
+}
+
+/* Add subtle floating shapes to other sections too */
+#about::before,
+#services::before,
+#gallery::before,
+#contact::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(
+    45deg,
+    rgba(59, 130, 246, 0.03),
+    rgba(29, 78, 216, 0.03)
+  );
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+#services::before {
+  top: 60%;
+  left: 10%;
+  background: linear-gradient(
+    45deg,
+    rgba(96, 165, 250, 0.03),
+    rgba(59, 130, 246, 0.03)
+  );
+}
+
+/* Make sure content stays above the shapes */
+#about > .container,
+#services > .container,
+#gallery > .container,
+#contact > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== ENHANCED ANIMATIONS ==================== */
+
+/* Add staggered fade-in for service cards */
+.service-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.service-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.service-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.service-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.service-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+/* Gallery items staggered animation */
+.gallery-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.gallery-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.gallery-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.gallery-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.gallery-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.gallery-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* ==================== ICON ENHANCEMENTS ==================== */
+
+/* Make service icons more premium */
+.service-card .bg-gradient-to-br {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .bg-gradient-to-br {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 35px rgba(59, 130, 246, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Contact icons - glass treatment */
+.contact-card .glass-card {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(59, 130, 246, 0.2) !important;
+  transition: all 0.3s ease;
+}
+
+.contact-card .glass-card:hover {
+  background: rgba(59, 130, 246, 0.1) !important;
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  transform: scale(1.05);
+}
+
+/* ==================== QUICK MOBILE FIXES ==================== */
+
+@media (max-width: 767px) {
+  .service-card {
+    background: rgba(
+      255,
+      255,
+      255,
+      0.08
+    ) !important; /* Slightly more opaque on mobile */
+  }
+
+  .gallery-item {
+    background: rgba(255, 255, 255, 0.06) !important;
+  }
+}
