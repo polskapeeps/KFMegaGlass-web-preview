@@ -121,44 +121,51 @@
     </script>
   </head>
 
-  <body class="bg-gray-900 text-gray-200 antialiased font-inter">
+  <body class="bg-slate-900 text-gray-200 antialiased font-inter">
+    <!-- Background shapes -->
+    <div class="bg-shapes fixed inset-0 pointer-events-none">
+      <div class="bg-shape bg-shape-1"></div>
+      <div class="bg-shape bg-shape-2"></div>
+      <div class="bg-shape bg-shape-3"></div>
+    </div>
+
     <!-- Header -->
-    <header
-      class="bg-gray-800 shadow-lg sticky top-0 z-50 backdrop-blur-sm bg-opacity-95"
-    >
+    <header class="glass-header fixed top-0 z-50 w-full">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-24">
           <div class="flex-shrink-0">
             <a href="#" class="text-2xl font-bold text-white">
-              <!-- Keep your existing logo, but add fallback -->
-              <img
-                src="assets/brand-logo.png"
-                alt="KF Megaglass Logo"
-                class="h-12 rounded-md"
-                onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';"
-              />
-              <!-- Fallback logo -->
-              <div
-                class="h-12 w-48 bg-gray-700 rounded-md items-center justify-center hidden"
-              >
-                <span class="gradient-text font-bold text-xl"
-                  >KF Megaglass</span
+              <!-- Keep your existing logo, but add glass card wrapper -->
+              <div class="glass-card-nav rounded-lg px-4 py-2">
+                <img
+                  src="assets/brand-logo.png"
+                  alt="KF Megaglass Logo"
+                  class="h-12 rounded-md"
+                  onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <!-- Fallback logo -->
+                <div
+                  class="h-12 w-48 rounded-md items-center justify-center hidden"
                 >
+                  <span class="gradient-text font-bold text-xl"
+                    >KF Megaglass</span
+                  >
+                </div>
               </div>
             </a>
           </div>
 
           <!-- Desktop Navigation -->
-          <nav class="hidden md:flex space-x-6">
+          <nav class="hidden md:flex space-x-2">
             <a
               href="#"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium transition-all duration-200"
+              class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
               >Home</a
             >
 
-            <div class="relative dropdown">
+            <div class="relative dropdown group">
               <button
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium inline-flex items-center transition-all duration-200"
+                class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium inline-flex items-center transition-all duration-200"
                 aria-haspopup="true"
                 aria-expanded="false"
                 id="desktop-products-button"
@@ -181,30 +188,30 @@
               </button>
               <div
                 id="desktop-products-menu"
-                class="dropdown-menu absolute left-0 top-full mt-1 w-56 bg-gray-700 rounded-lg shadow-xl z-20 py-2"
+                class="dropdown-menu absolute left-0 top-full mt-2 w-56 glass-dropdown rounded-xl shadow-xl z-20 py-2 opacity-0 invisible transform translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0"
                 role="menu"
               >
                 <a
                   href="#shower-enclosures"
-                  class="block px-4 py-3 text-sm text-gray-200 hover:bg-gray-600 hover:text-white transition-colors duration-200"
+                  class="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200 rounded-lg mx-2"
                   role="menuitem"
                   >Shower Enclosures</a
                 >
                 <a
                   href="#glass-doors"
-                  class="block px-4 py-3 text-sm text-gray-200 hover:bg-gray-600 hover:text-white transition-colors duration-200"
+                  class="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200 rounded-lg mx-2"
                   role="menuitem"
                   >Frameless Glass Doors</a
                 >
                 <a
                   href="#partitions"
-                  class="block px-4 py-3 text-sm text-gray-200 hover:bg-gray-600 hover:text-white transition-colors duration-200"
+                  class="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200 rounded-lg mx-2"
                   role="menuitem"
                   >Partition Systems</a
                 >
                 <a
                   href="#hardware"
-                  class="block px-4 py-3 text-sm text-gray-200 hover:bg-gray-600 hover:text-white transition-colors duration-200"
+                  class="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200 rounded-lg mx-2"
                   role="menuitem"
                   >Hardware</a
                 >
@@ -213,17 +220,17 @@
 
             <a
               href="#gallery"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium transition-all duration-200"
+              class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
               >Gallery</a
             >
             <a
               href="#railings"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium transition-all duration-200"
+              class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
               >Railings</a
             >
             <a
               href="#contact"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium transition-all duration-200"
+              class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
               >Contact Us</a
             >
           </nav>
@@ -232,7 +239,7 @@
           <div class="md:hidden flex items-center">
             <button
               id="mobile-menu-button"
-              class="text-gray-300 hover:text-white focus:outline-none focus:text-white p-2 rounded-md transition-colors duration-200"
+              class="glass-nav-item hover-glass-nav p-2 rounded-lg transition-colors duration-200"
               aria-expanded="false"
               aria-controls="mobile-menu"
             >
@@ -258,17 +265,17 @@
       <!-- Mobile Menu -->
       <div
         id="mobile-menu"
-        class="md:hidden hidden bg-gray-800 border-t border-gray-700"
+        class="md:hidden hidden glass-dropdown border-t border-gray-700/30"
       >
         <a
           href="#"
-          class="block py-3 px-4 text-base text-gray-200 hover:bg-gray-700 transition-colors duration-200"
+          class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
           >Home</a
         >
         <div class="relative">
           <button
             id="mobile-products-button"
-            class="w-full text-left block py-3 px-4 text-base text-gray-200 hover:bg-gray-700 flex justify-between items-center transition-colors duration-200"
+            class="w-full text-left block py-3 px-4 text-base text-gray-200 hover:bg-white/10 flex justify-between items-center transition-colors duration-200"
             aria-expanded="false"
             aria-controls="mobile-products-menu"
           >
@@ -287,49 +294,48 @@
               ></path>
             </svg>
           </button>
-          <div id="mobile-products-menu" class="hidden pl-4 bg-gray-750">
+          <div id="mobile-products-menu" class="hidden pl-4 bg-gray-750/50">
             <a
               href="#shower-enclosures"
-              class="block py-3 px-4 text-sm text-gray-200 hover:bg-gray-600 transition-colors duration-200"
+              class="block py-3 px-4 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200"
               >Shower Enclosures</a
             >
             <a
               href="#glass-doors"
-              class="block py-3 px-4 text-sm text-gray-200 hover:bg-gray-600 transition-colors duration-200"
+              class="block py-3 px-4 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200"
               >Frameless Glass Doors</a
             >
             <a
               href="#partitions"
-              class="block py-3 px-4 text-sm text-gray-200 hover:bg-gray-600 transition-colors duration-200"
+              class="block py-3 px-4 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200"
               >Partition Systems</a
             >
             <a
               href="#hardware"
-              class="block py-3 px-4 text-sm text-gray-200 hover:bg-gray-600 transition-colors duration-200"
+              class="block py-3 px-4 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200"
               >Hardware</a
             >
           </div>
         </div>
         <a
           href="#gallery"
-          class="block py-3 px-4 text-base text-gray-200 hover:bg-gray-700 transition-colors duration-200"
+          class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
           >Gallery</a
         >
         <a
           href="#railings"
-          class="block py-3 px-4 text-base text-gray-200 hover:bg-gray-700 transition-colors duration-200"
+          class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
           >Railings</a
         >
         <a
           href="#contact"
-          class="block py-3 px-4 text-base text-gray-200 hover:bg-gray-700 transition-colors duration-200"
+          class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
           >Contact Us</a
         >
       </div>
     </header>
 
-    <main>
-      <!-- Hero Section -->
+    <main class="relative z-10">
       <!-- Hero Section with Slideshow -->
       <section class="hero-bg text-white py-32 md:py-48 relative">
         <!-- Slideshow Background -->
@@ -341,85 +347,109 @@
           <div class="hero-slide"></div>
         </div>
 
-        <!-- Dark overlay for better text readability -->
-        <div class="hero-overlay"></div>
+        <!-- Glass overlay for better text readability -->
+        <div class="hero-glass-overlay"></div>
 
-        <!-- Optional: Slideshow indicators (dots) -->
+        <!-- Slideshow indicators (dots) with glass effect -->
         <div class="slideshow-indicators">
-          <div class="indicator active" data-slide="0"></div>
-          <div class="indicator" data-slide="1"></div>
-          <div class="indicator" data-slide="2"></div>
-          <div class="indicator" data-slide="3"></div>
-          <div class="indicator" data-slide="4"></div>
+          <div class="indicator glass-indicator active" data-slide="0"></div>
+          <div class="indicator glass-indicator" data-slide="1"></div>
+          <div class="indicator glass-indicator" data-slide="2"></div>
+          <div class="indicator glass-indicator" data-slide="3"></div>
+          <div class="indicator glass-indicator" data-slide="4"></div>
         </div>
 
-        <!-- Hero Content (unchanged) -->
+        <!-- Hero Content -->
         <div
           class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
         >
-          <h1
-            class="text-5xl sm:text-6xl md:text-7xl font-bold mb-8 leading-tight"
+          <!-- Main hero card -->
+          <div
+            class="glass-card-hero stack-layer rounded-3xl p-12 max-w-5xl mx-auto float-1 mb-8"
           >
-            Custom <span class="gradient-text">Frameless Glass</span> Solutions
-          </h1>
-          <p
-            class="text-xl sm:text-2xl md:text-3xl mb-12 text-gray-200 max-w-4xl mx-auto leading-relaxed"
+            <h1
+              class="text-5xl sm:text-6xl md:text-7xl font-bold mb-8 leading-tight"
+            >
+              Custom
+              <span class="gradient-text">Frameless Glass</span> Solutions
+            </h1>
+            <p
+              class="text-xl sm:text-2xl md:text-3xl mb-12 text-gray-200 max-w-4xl mx-auto leading-relaxed"
+            >
+              Transform your space with premium frameless glass installations.
+              Professional craftsmanship meets cutting-edge design.
+            </p>
+            <a
+              href="#contact"
+              class="btn-primary text-white font-semibold py-4 px-12 rounded-full text-lg transition-all duration-300 transform hover:scale-105 inline-block"
+            >
+              Get Free Quote
+            </a>
+          </div>
+
+          <!-- Floating info cards -->
+          <div
+            class="absolute top-8 right-8 glass-card rounded-2xl p-4 w-48 float-2 hidden lg:block"
           >
-            Transform your space with premium frameless glass installations.
-            Professional craftsmanship meets cutting-edge design.
-          </p>
-          <a
-            href="#contact"
-            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-12 rounded-full text-lg transition-all duration-300 transform hover:scale-105 float-animation shadow-lg hover:shadow-blue-500/25"
+            <div class="text-center">
+              <div class="text-2xl font-bold gradient-text">15+</div>
+              <div class="text-sm text-gray-400">Years Experience</div>
+            </div>
+          </div>
+
+          <div
+            class="absolute bottom-8 left-8 glass-card rounded-2xl p-4 w-52 float-3 hidden lg:block"
           >
-            Get Free Quote
-          </a>
+            <div class="text-center">
+              <div class="text-2xl font-bold gradient-text">500+</div>
+              <div class="text-sm text-gray-400">Projects Completed</div>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- About Section -->
-      <section id="about" class="py-20 md:py-32 bg-gray-800">
+      <section id="about" class="py-20 md:py-32 relative">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid md:grid-cols-2 gap-16 items-center">
             <div class="order-2 md:order-1">
-              <h2 class="text-4xl lg:text-5xl font-bold text-white mb-8">
-                About <span class="gradient-text">KF Megaglass</span>
-              </h2>
-              <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
-                <p>
-                  We're proud to be one of the top providers of frameless glass
-                  solutions. What we love about our work is combining smart
-                  technology with precision hardware to create designs that look
-                  amazing and actually function while performing better.
-                </p>
-                <p>
-                  We handle everything from sleek residential shower systems
-                  that give bathrooms a modern upgrade, to large commercial
-                  installations that completely transform business spaces. Our
-                  specialty is creating open, airy environments that maximize
-                  natural light and make spaces feel bigger.
-                </p>
-                <p>
-                  No matter what kind of project you're planning, we never
-                  compromise on quality. We use only premium materials, sourcing
-                  the best brass, titanium, and stainless steel on the market.
-                  These materials aren't just strong and long lasting, they also
-                  look incredible.
-                </p>
+              <div class="glass-card stack-layer rounded-2xl p-8">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-8">
+                  About <span class="gradient-text">KF Megaglass</span>
+                </h2>
+                <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
+                  <p>
+                    We're proud to be one of the top providers of frameless
+                    glass solutions. What we love about our work is combining
+                    smart technology with precision hardware to create designs
+                    that look amazing and actually function while performing
+                    better.
+                  </p>
+                  <p>
+                    We handle everything from sleek residential shower systems
+                    that give bathrooms a modern upgrade, to large commercial
+                    installations that completely transform business spaces. Our
+                    specialty is creating open, airy environments that maximize
+                    natural light and make spaces feel bigger.
+                  </p>
+                  <p>
+                    No matter what kind of project you're planning, we never
+                    compromise on quality. We use only premium materials,
+                    sourcing the best brass, titanium, and stainless steel on
+                    the market. These materials aren't just strong and long
+                    lasting, they also look incredible.
+                  </p>
+                </div>
               </div>
             </div>
             <div class="order-1 md:order-2">
-              <div class="relative group">
-                <!-- Keep your existing image but add fallback -->
+              <div class="gallery-item float-2">
                 <img
                   src="assets/shower-v2.jpg"
                   alt="KF Megaglass Craftsmanship"
-                  class="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  class="rounded-2xl shadow-2xl w-full h-auto object-cover"
                   onerror="this.src='https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';"
                 />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl"
-                ></div>
               </div>
             </div>
           </div>
@@ -427,26 +457,28 @@
       </section>
 
       <!-- Services Section -->
-      <section id="services" class="py-20 md:py-32 bg-gray-900">
+      <section id="services" class="py-20 md:py-32 relative">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-20">
-            <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our <span class="gradient-text">Services</span>
-            </h2>
-            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-              Premium frameless glass solutions tailored to your vision and
-              space
-            </p>
+            <div class="glass-card-strong rounded-2xl p-8 inline-block">
+              <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Our <span class="gradient-text">Services</span>
+              </h2>
+              <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Premium frameless glass solutions tailored to your vision and
+                space
+              </p>
+            </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Shower Enclosures -->
             <div
               id="shower-enclosures"
-              class="service-card bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-blue-500/20 border border-gray-700 hover:border-blue-500/30"
+              class="service-card glass-card stack-layer rounded-2xl p-8 hover-glass transition-all duration-300"
             >
               <div
-                class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6"
+                class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6"
               >
                 <svg
                   class="w-8 h-8 text-white"
@@ -475,10 +507,10 @@
             <!-- Glass Doors -->
             <div
               id="glass-doors"
-              class="service-card bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-blue-500/20 border border-gray-700 hover:border-blue-500/30"
+              class="service-card glass-card stack-layer rounded-2xl p-8 hover-glass transition-all duration-300"
             >
               <div
-                class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6"
+                class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6"
               >
                 <svg
                   class="w-8 h-8 text-white"
@@ -507,10 +539,10 @@
             <!-- Partitions -->
             <div
               id="partitions"
-              class="service-card bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-blue-500/20 border border-gray-700 hover:border-blue-500/30"
+              class="service-card glass-card stack-layer rounded-2xl p-8 hover-glass transition-all duration-300"
             >
               <div
-                class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6"
+                class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6"
               >
                 <svg
                   class="w-8 h-8 text-white"
@@ -539,10 +571,10 @@
             <!-- Railings -->
             <div
               id="railings"
-              class="service-card bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-blue-500/20 border border-gray-700 hover:border-blue-500/30"
+              class="service-card glass-card stack-layer rounded-2xl p-8 hover-glass transition-all duration-300"
             >
               <div
-                class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6"
+                class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6"
               >
                 <svg
                   class="w-8 h-8 text-white"
@@ -571,10 +603,10 @@
             <!-- Hardware - Spanning 2 columns -->
             <div
               id="hardware"
-              class="service-card bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-blue-500/20 border border-gray-700 hover:border-blue-500/30 md:col-span-2 lg:col-span-2"
+              class="service-card glass-card stack-layer rounded-2xl p-8 hover-glass transition-all duration-300 md:col-span-2 lg:col-span-2"
             >
               <div
-                class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6"
+                class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6"
               >
                 <svg
                   class="w-8 h-8 text-white"
@@ -605,23 +637,23 @@
       </section>
 
       <!-- Gallery Section -->
-      <section id="gallery" class="py-20 md:py-32 bg-gray-800">
+      <section id="gallery" class="py-20 md:py-32 relative">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-20">
-            <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our <span class="gradient-text">Portfolio</span>
-            </h2>
-            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-              Discover our latest projects showcasing precision craftsmanship
-              and innovative design
-            </p>
+            <div class="glass-card-strong rounded-2xl p-8 inline-block">
+              <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Our <span class="gradient-text">Portfolio</span>
+              </h2>
+              <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Discover our latest projects showcasing precision craftsmanship
+                and innovative design
+              </p>
+            </div>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Keep your existing images but add fallbacks -->
-            <div
-              class="gallery-item rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-500"
-            >
+            <!-- Keep your existing images but add glass styling -->
+            <div class="gallery-item">
               <img
                 src="https://nebula.wsimg.com/beeb9302320b74a215fcc330087f5627?AccessKeyId=88FADA07FC6AA0CD0591&disposition=0&alloworigin=1"
                 onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"
@@ -630,9 +662,7 @@
                 loading="lazy"
               />
             </div>
-            <div
-              class="gallery-item rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-500"
-            >
+            <div class="gallery-item">
               <img
                 src="https://nebula.wsimg.com/d8bf58688f5c832ff6a7b0766062b03e?AccessKeyId=88FADA07FC6AA0CD0591&disposition=0&alloworigin=1"
                 onerror="this.src='https://images.unsplash.com/photo-1571708655418-b2b1c510a7db?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"
@@ -641,9 +671,7 @@
                 loading="lazy"
               />
             </div>
-            <div
-              class="gallery-item rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-500"
-            >
+            <div class="gallery-item">
               <img
                 src="https://nebula.wsimg.com/8533415c96b1fd923cc60288eb84673d?AccessKeyId=88FADA07FC6AA0CD0591&disposition=0&alloworigin=1"
                 onerror="this.src='https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"
@@ -652,9 +680,7 @@
                 loading="lazy"
               />
             </div>
-            <div
-              class="gallery-item rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-500"
-            >
+            <div class="gallery-item">
               <img
                 src="https://nebula.wsimg.com/791ee20fe8aa87186fc2fd2cd029bb90?AccessKeyId=88FADA07FC6AA0CD0591&disposition=0&alloworigin=1"
                 onerror="this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"
@@ -663,9 +689,7 @@
                 loading="lazy"
               />
             </div>
-            <div
-              class="gallery-item rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-500"
-            >
+            <div class="gallery-item">
               <img
                 src="https://nebula.wsimg.com/b9ed1ed0f3b7bdd1b2110a94056cb27d?AccessKeyId=88FADA07FC6AA0CD0591&disposition=0&alloworigin=1"
                 onerror="this.src='https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"
@@ -674,9 +698,7 @@
                 loading="lazy"
               />
             </div>
-            <div
-              class="gallery-item rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-500"
-            >
+            <div class="gallery-item">
               <img
                 src="https://nebula.wsimg.com/605c74c40f678d848ce114b5d011a976?AccessKeyId=88FADA07FC6AA0CD0591&disposition=0&alloworigin=1"
                 onerror="this.src='https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"
@@ -690,32 +712,29 @@
       </section>
 
       <!-- Contact Section -->
-      <section id="contact" class="py-20 md:py-32 bg-gray-900 relative">
-        <div
-          class="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-purple-900/10"
-        ></div>
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section id="contact" class="py-20 md:py-32 relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-20">
-            <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Get In <span class="gradient-text">Touch</span>
-            </h2>
-            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-              Ready to transform your space? Let's discuss your project and
-              bring your vision to life.
-            </p>
+            <div class="glass-card-strong rounded-2xl p-8 inline-block">
+              <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Get In <span class="gradient-text">Touch</span>
+              </h2>
+              <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Ready to transform your space? Let's discuss your project and
+                bring your vision to life.
+              </p>
+            </div>
           </div>
 
           <div class="max-w-2xl mx-auto">
-            <div
-              class="contact-card bg-gray-800/80 p-10 rounded-3xl shadow-2xl"
-            >
+            <div class="contact-card stack-layer rounded-3xl p-10 shadow-2xl">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div class="text-center">
                   <div
-                    class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"
+                    class="glass-card w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
                   >
                     <svg
-                      class="w-8 h-8 text-white"
+                      class="w-8 h-8 text-blue-400"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -739,10 +758,10 @@
 
                 <div class="text-center">
                   <div
-                    class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"
+                    class="glass-card w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
                   >
                     <svg
-                      class="w-8 h-8 text-white"
+                      class="w-8 h-8 text-blue-400"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -765,12 +784,12 @@
                 </div>
               </div>
 
-              <div class="text-center border-t border-gray-700 pt-8">
+              <div class="text-center border-t border-gray-700/50 pt-8">
                 <div
-                  class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"
+                  class="glass-card w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
                 >
                   <svg
-                    class="w-8 h-8 text-white"
+                    class="w-8 h-8 text-blue-400"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -803,18 +822,18 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 border-t border-gray-700 py-12">
+    <footer class="glass-card border-t border-gray-700/30 py-12 relative">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="mb-8">
           <a
             href="https://www.facebook.com/pages/KF-Megaglass-Shower-Enclosures/208668755897730"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center justify-center w-12 h-12 bg-gray-700 hover:bg-blue-600 rounded-full transition-colors duration-300"
+            class="glass-card inline-flex items-center justify-center w-12 h-12 rounded-full hover-glass transition-colors duration-300"
             aria-label="KF Megaglass on Facebook"
           >
             <svg
-              class="w-6 h-6 text-gray-300 hover:text-white"
+              class="w-6 h-6 text-blue-400"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
