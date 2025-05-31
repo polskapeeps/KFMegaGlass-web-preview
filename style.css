@@ -269,3 +269,16 @@ button:focus {
 .shadow-glow-hover:hover {
   box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
 }
+@media (max-width: 767px) {
+  .mobile-max-contrast .glass-card-hero p {
+    /* Ultra-strong text shadow with white glow */
+    text-shadow: 2px 2px 0px black, -2px -2px 0px black, 2px -2px 0px black,
+      -2px 2px 0px black, 1px 1px 0px black, -1px -1px 0px black,
+      1px -1px 0px black, -1px 1px 0px black, 4px 4px 8px black,
+      0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3) !important;
+
+    color: white !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px; /* Slight letter spacing for clarity */
+  }
+}
