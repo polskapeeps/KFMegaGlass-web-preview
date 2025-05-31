@@ -202,12 +202,13 @@ body {
   background: rgba(59, 130, 246, 0.7);
   opacity: 0;
   transition: opacity 0.3s ease;
-  display: flex;
+  display: none !important;
   align-items: center;
   justify-content: center;
 }
 
 .gallery-item:hover::after {
+  background: rgba(0, 0, 0, 0.1) !important;
   opacity: 1;
 }
 
