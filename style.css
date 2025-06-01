@@ -76,6 +76,7 @@ body {
 .hero-slide:nth-child(5) {
   background-image: url('assets/hero/balustrade.jpg');
 }
+
 /* Mobile adjustments */
 @media (max-width: 767px) {
   .hero-slide {
@@ -269,6 +270,7 @@ button:focus {
 .shadow-glow-hover:hover {
   box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
 }
+
 @media (max-width: 767px) {
   .mobile-max-contrast .glass-card-hero p {
     /* Ultra-strong text shadow with white glow */
@@ -282,99 +284,160 @@ button:focus {
     letter-spacing: 0.5px; /* Slight letter spacing for clarity */
   }
 }
-/* ==================== BOTTOM SECTIONS UPGRADE ==================== */
 
-/* Make ALL sections match the hero's visual quality */
+/* ==================== MERGED FIXES FROM fixes.css ==================== */
 
-/* About Section - Glass Card Styling */
-#about .glass-card {
-  background: rgba(255, 255, 255, 0.05) !important;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
-}
-
-/* Services Section - Upgrade the Header */
-#services .glass-card-strong {
-  background: rgba(255, 255, 255, 0.08) !important;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-}
-
-/* Service Cards - Make them glass AF */
-.service-card {
-  background: rgba(255, 255, 255, 0.06) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3) !important;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.service-card:hover {
-  background: rgba(255, 255, 255, 0.1) !important;
-  border-color: rgba(59, 130, 246, 0.3) !important;
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4), 0 0 40px rgba(59, 130, 246, 0.2) !important;
-}
-
-/* Gallery Section - Match the premium look */
-#gallery .glass-card-strong {
-  background: rgba(255, 255, 255, 0.08) !important;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-}
-
-/* Gallery Items - Enhanced glass effect */
-.gallery-item {
-  background: rgba(255, 255, 255, 0.04) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  transition: all 0.4s ease;
-  position: relative;
-}
-
-.gallery-item:hover {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border-color: rgba(59, 130, 246, 0.3) !important;
-  transform: scale(1.03) rotate(0.5deg);
-  box-shadow: 0 25px 70px rgba(59, 130, 246, 0.2);
-}
-
-/* Remove that blue overlay we don't like */
+/* Fix: Remove blue overlay from gallery images on hover */
 .gallery-item::after {
-  display: none !important;
+  display: none !important; /* Completely remove the blue overlay */
 }
 
-/* Contact Section - Premium glass card */
-.contact-card {
-  background: rgba(255, 255, 255, 0.08) !important;
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4) !important;
+/* Alternative: If you want to keep some hover effect but not blue */
+.gallery-item:hover::after {
+  background: rgba(0, 0, 0, 0.1) !important; /* Subtle dark overlay instead */
+  opacity: 0 !important; /* Or just make it invisible */
 }
 
-#contact .glass-card-strong {
-  background: rgba(255, 255, 255, 0.08) !important;
+/* Fix: Improve menu text legibility */
+.glass-header {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ) !important; /* Darker background for better contrast */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Make navigation text more legible */
+.glass-nav-item {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
+}
+
+.hover-glass-nav:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+/* Fix: Improve hero text legibility */
+.hero-glass-overlay {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ) !important; /* Darker overlay for better text contrast */
+  backdrop-filter: blur(1px);
+}
+
+/* Add text shadows to hero text for better readability */
+.glass-card-hero h1,
+.glass-card-hero p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Specifically target the main hero heading */
+.glass-card-hero h1 {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8) !important;
+}
+.glass-card-hero h1 .gradient-text {
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.195),
+    -1px -1px 0px rgba(57, 132, 185, 0.9), 1px -1px 0px rgba(33, 12, 137, 0.9),
+    -1px 1px 0px rgba(0, 0, 0, 0.9), 4px 4px 8px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(59, 130, 246, 0.6) !important; /* Blue glow */
+}
+
+/* Make the hero card background more opaque for better text contrast */
+.glass-card-hero {
+  background: none !important; /* Remove the big dark block */
+  backdrop-filter: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 2rem !important; /* Reduce padding so it's not so massive */
+}
+
+/* Improve dropdown menu legibility */
+.glass-dropdown {
+  background: rgba(0, 0, 0, 0.9) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
-/* Footer - Glass treatment */
-footer {
-  background: rgba(255, 255, 255, 0.03) !important;
+/* Mobile menu improvements */
+#mobile-menu {
+  background: rgba(0, 0, 0, 0.9) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+#mobile-menu a {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.9), -1px -1px 0px rgba(0, 0, 0, 0.9),
+    1px -1px 0px rgba(0, 0, 0, 0.9), -1px 1px 0px rgba(0, 0, 0, 0.9),
+    3px 3px 6px rgba(0, 0, 0, 0.8) !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 500 !important;
+}
+
+/* Floating info cards - make text more legible */
+.glass-card {
+  background: rgba(0, 0, 0, 0.6) !important;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.glass-card .gradient-text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Fix slideshow indicators if they're hard to see */
+.glass-indicator {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border: 2px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.glass-indicator.active {
+  background: rgba(59, 130, 246, 0.9) !important;
+  border-color: white !important;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+}
+
+/* If you want to improve the hero section size/padding */
+.hero-bg {
+  min-height: 100vh; /* Full viewport height */
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+/* Improve button visibility */
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+  text-shadow: none; /* Buttons don't need text shadow */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Fallbacks for older browsers */
+@supports not (backdrop-filter: blur(10px)) {
+  .glass-header {
+    background: rgba(0, 0, 0, 0.95) !important;
+  }
+
+  .glass-card-hero {
+    background: rgba(0, 0, 0, 0.7) !important;
+  }
+
+  .glass-dropdown {
+    background: rgba(0, 0, 0, 0.95) !important;
+  }
 }
 
 /* ==================== BOTTOM SECTIONS UPGRADE ==================== */
