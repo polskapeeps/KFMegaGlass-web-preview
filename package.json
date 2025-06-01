@@ -9,6 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist",
+    "deploy": "gh-pages -d dist",
     "lint": "echo 'No linting configured yet'",
     "format": "echo 'No formatting configured yet'"
   },
