@@ -1,26 +1,26 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  // Base path for production (adjust if needed)
-  base: '/KFMegaGlass-web-preview',
+  // Base path for GitHub Pages deployment
+  base:
+    process.env.NODE_ENV === 'production' ? '/KFMegaGlass-web-preview/' : '/',
 
   // Development server configuration
   server: {
     port: 3000,
-    open: true, // Auto-open browser
-    host: true, // Allow external connections
+    open: true,
+    host: true,
   },
 
   // Build configuration
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    sourcemap: true,
+    sourcemap: false, // Disable in production for smaller builds
     minify: 'terser',
     rollupOptions: {
       output: {
         manualChunks: {
-          // Separate vendor chunks for better caching
           vendor: ['gsap', 'aos', 'lenis'],
         },
       },
@@ -35,11 +35,6 @@ export default defineConfig({
     devSourcemap: true,
   },
 
-  // Plugin configuration (add plugins here as needed)
-  plugins: [
-    // Add any Vite plugins you want to use
-  ],
-
   // Optimization
   optimizeDeps: {
     include: ['gsap', 'gsap/ScrollTrigger', 'aos', 'lenis'],
@@ -47,6 +42,6 @@ export default defineConfig({
 
   // Define global constants
   define: {
-    __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
+    __APP_VERSION__: JSON.stringify(process.env.npm_package_version || '1.0.0'),
   },
 });
