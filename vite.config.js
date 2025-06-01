@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   // Base path for production (adjust if needed)
-  base: '/https://github.com/polskapeeps/KFMegaGlass-web-preview',
+  base: '/KFMegaGlass-web-preview',
 
   // Development server configuration
   server: {
