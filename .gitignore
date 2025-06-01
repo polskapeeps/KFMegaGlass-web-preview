@@ -3,3 +3,6 @@
 *.old
 .dev/
 og.*
+
+node_modules
+kf-megaglass-vite/
