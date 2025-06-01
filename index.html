@@ -130,93 +130,353 @@
       <div class="bg-shape bg-shape-3"></div>
     </div>
 
-    <!-- Header -->
-<!-- Replace your existing header section with this streamlined version -->
-<header class="glass-header fixed top-0 z-50 w-full">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Single main header row with everything inline -->
-    <div class="flex items-center justify-between h-20">
-      <!-- Logo -->
-      <div class="flex-shrink-0">
-        <a href="#" class="text-2xl font-bold text-white">
-          <div class="glass-card-nav rounded-lg px-4 py-2">
-            <img
-              src="assets/brand-logo.png"
-              alt="KF Megaglass Logo"
-              class="h-12 rounded-md"
-              onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            />
-            <!-- Fallback logo -->
-            <div class="h-12 w-48 rounded-md items-center justify-center hidden">
-              <span class="gradient-text font-bold text-xl">KF Megaglass</span>
+    <!-- Updated header section with email added -->
+    <header class="glass-header fixed top-0 z-50 w-full">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Single main header row with everything inline -->
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="#" class="text-2xl font-bold text-white">
+              <div class="glass-card-nav rounded-lg px-4 py-2">
+                <img
+                  src="assets/brand-logo.png"
+                  alt="KF Megaglass Logo"
+                  class="h-12 rounded-md"
+                  onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <!-- Fallback logo -->
+                <div
+                  class="h-12 w-48 rounded-md items-center justify-center hidden"
+                >
+                  <span class="gradient-text font-bold text-xl"
+                    >KF Megaglass</span
+                  >
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Contact Info - Shows between logo and nav on desktop, hidden on mobile -->
+          <div class="hidden lg:flex items-center gap-6 text-sm">
+            <!-- Phone Numbers -->
+            <div class="flex items-center gap-3">
+              <a
+                href="tel:2672435478"
+                class="glass-nav-item hover-glass-nav px-3 py-2 rounded-lg transition-all duration-200 flex items-center gap-2"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.308 1.154a11.06 11.06 0 006.086 6.086l1.154-2.308a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  ></path>
+                </svg>
+                <span class="font-medium">(267) 243-5478</span>
+              </a>
+              <a
+                href="tel:2672524314"
+                class="glass-nav-item hover-glass-nav px-3 py-2 rounded-lg transition-all duration-200 flex items-center gap-2"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.308 1.154a11.06 11.06 0 006.086 6.086l1.154-2.308a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  ></path>
+                </svg>
+                <span class="font-medium">(267) 252-4314</span>
+              </a>
+            </div>
+
+            <!-- Email -->
+            <div class="border-l border-white/20 pl-3">
+              <a
+                href="mailto:radek@kfmegaglass.com"
+                class="glass-nav-item hover-glass-nav px-3 py-2 rounded-lg transition-all duration-200 flex items-center gap-2"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                <span class="font-medium">radek@kfmegaglass.com</span>
+              </a>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="flex items-center gap-2 border-l border-white/20 pl-3">
+              <a
+                href="https://www.facebook.com/pages/KF-Megaglass-Shower-Enclosures/208668755897730"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="glass-nav-item hover-glass-nav p-2 rounded-lg transition-all duration-200"
+                aria-label="Follow us on Facebook"
+              >
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    fill-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="glass-nav-item hover-glass-nav p-2 rounded-lg transition-all duration-200"
+                aria-label="Follow us on Instagram"
+              >
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    fill-rule="evenodd"
+                    d="M12.017 0C8.396 0 7.956.01 6.729.058 2.491.227.213 2.5.058 6.729.01 7.956 0 8.396 0 12.017c0 3.621.01 4.061.058 5.288.169 4.238 2.442 6.516 6.671 6.671 1.227.048 1.667.058 5.288.058 3.621 0 4.061-.01 5.288-.058 4.238-.155 6.516-2.433 6.671-6.671.048-1.227.058-1.667.058-5.288 0-3.621-.01-4.061-.058-5.288C23.831 2.491 21.553.213 17.324.058 16.097.01 15.657 0 12.036 0h-.019zm-.717 1.442h.718c3.136 0 3.513.012 4.741.07 3.677.168 5.093 1.62 5.093 4.903 0 3.622-.012 4.061-.07 5.288-.168 3.677-1.62 5.093-4.903 5.093-3.622 0-4.061-.012-5.288-.07-3.677-.168-5.093-1.62-5.093-4.903 0-3.622.012-4.061.07-5.288.168-3.677 1.62-5.093 4.903-5.093zm4.003 2.058a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm-3.47 1.442a3.058 3.058 0 100 6.116 3.058 3.058 0 000-6.116z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
-        </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex space-x-2">
+            <a
+              href="#"
+              class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+              >Home</a
+            >
+
+            <div class="relative dropdown group">
+              <button
+                class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium inline-flex items-center transition-all duration-200"
+                aria-haspopup="true"
+                aria-expanded="false"
+                id="desktop-products-button"
+                aria-controls="desktop-products-menu"
+              >
+                Products
+                <svg
+                  class="w-4 h-4 ml-1 transition-transform duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                id="desktop-products-menu"
+                class="dropdown-menu absolute left-0 top-full mt-2 w-56 glass-dropdown rounded-xl shadow-xl z-20 py-2 opacity-0 invisible transform translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0"
+                role="menu"
+              >
+                <a
+                  href="shower-enclosures.html"
+                  class="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200 rounded-lg mx-2"
+                  role="menuitem"
+                  >Shower Enclosures</a
+                >
+                <a
+                  href="glass-doors.html"
+                  class="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200 rounded-lg mx-2"
+                  role="menuitem"
+                  >Frameless Glass Doors</a
+                >
+                <a
+                  href="partitions.html"
+                  class="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200 rounded-lg mx-2"
+                  role="menuitem"
+                  >Partition Systems</a
+                >
+              </div>
+            </div>
+
+            <a
+              href="#gallery"
+              class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+              >Gallery</a
+            >
+            <a
+              href="#railings"
+              class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+              >Railings</a
+            >
+            <a
+              href="#contact"
+              class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+              >Contact Us</a
+            >
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="glass-nav-item hover-glass-nav p-2 rounded-lg transition-colors duration-200"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="h-6 w-6"
+                stroke="currentColor"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
 
-      <!-- Contact Info - Shows between logo and nav on desktop, hidden on mobile -->
-      <div class="hidden lg:flex items-center gap-6 text-sm">
-        <div class="flex items-center gap-4">
-          <a href="tel:2672435478" class="glass-nav-item hover-glass-nav px-3 py-2 rounded-lg transition-all duration-200 flex items-center gap-2">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.308 1.154a11.06 11.06 0 006.086 6.086l1.154-2.308a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-            </svg>
-            <span class="font-medium">(267) 243-5478</span>
-          </a>
-          <a href="tel:2672524314" class="glass-nav-item hover-glass-nav px-3 py-2 rounded-lg transition-all duration-200 flex items-center gap-2">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.308 1.154a11.06 11.06 0 006.086 6.086l1.154-2.308a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-            </svg>
-            <span class="font-medium">(267) 252-4314</span>
-          </a>
+      <!-- Mobile Menu (add email here too) -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden glass-dropdown border-t border-gray-700/30"
+      >
+        <!-- Mobile Contact Info -->
+        <div class="border-b border-white/10 py-4 px-4">
+          <div class="flex flex-col gap-3 text-sm">
+            <a
+              href="tel:2672435478"
+              class="glass-nav-item hover-glass-nav px-3 py-2 rounded-lg transition-all duration-200 flex items-center gap-2"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.308 1.154a11.06 11.06 0 006.086 6.086l1.154-2.308a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                ></path>
+              </svg>
+              (267) 243-5478
+            </a>
+            <a
+              href="tel:2672524314"
+              class="glass-nav-item hover-glass-nav px-3 py-2 rounded-lg transition-all duration-200 flex items-center gap-2"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.308 1.154a11.06 11.06 0 006.086 6.086l1.154-2.308a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                ></path>
+              </svg>
+              (267) 252-4314
+            </a>
+            <!-- Email in mobile menu -->
+            <a
+              href="mailto:radek@kfmegaglass.com"
+              class="glass-nav-item hover-glass-nav px-3 py-2 rounded-lg transition-all duration-200 flex items-center gap-2"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+              radek@kfmegaglass.com
+            </a>
+            <div class="flex items-center gap-3 pt-2">
+              <a
+                href="https://www.facebook.com/pages/KF-Megaglass-Shower-Enclosures/208668755897730"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="glass-nav-item hover-glass-nav p-2 rounded-lg transition-all duration-200"
+                aria-label="Follow us on Facebook"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    fill-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="glass-nav-item hover-glass-nav p-2 rounded-lg transition-all duration-200"
+                aria-label="Follow us on Instagram"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    fill-rule="evenodd"
+                    d="M12.017 0C8.396 0 7.956.01 6.729.058 2.491.227.213 2.5.058 6.729.01 7.956 0 8.396 0 12.017c0 3.621.01 4.061.058 5.288.169 4.238 2.442 6.516 6.671 6.671 1.227.048 1.667.058 5.288.058 3.621 0 4.061-.01 5.288-.058 4.238-.155 6.516-2.433 6.671-6.671.048-1.227.058-1.667.058-5.288 0-3.621-.01-4.061-.058-5.288C23.831 2.491 21.553.213 17.324.058 16.097.01 15.657 0 12.036 0h-.019zm-.717 1.442h.718c3.136 0 3.513.012 4.741.07 3.677.168 5.093 1.62 5.093 4.903 0 3.622-.012 4.061-.07 5.288-.168 3.677-1.62 5.093-4.903 5.093-3.622 0-4.061-.012-5.288-.07-3.677-.168-5.093-1.62-5.093-4.903 0-3.622.012-4.061.07-5.288.168-3.677 1.62-5.093 4.903-5.093zm4.003 2.058a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm-3.47 1.442a3.058 3.058 0 100 6.116 3.058 3.058 0 000-6.116z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
-        
-        <!-- Social Media Icons -->
-        <div class="flex items-center gap-2 border-l border-white/20 pl-4">
-          <a
-            href="https://www.facebook.com/pages/KF-Megaglass-Shower-Enclosures/208668755897730"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="glass-nav-item hover-glass-nav p-2 rounded-lg transition-all duration-200"
-            aria-label="Follow us on Facebook"
-          >
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
-            </svg>
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="glass-nav-item hover-glass-nav p-2 rounded-lg transition-all duration-200"
-            aria-label="Follow us on Instagram"
-          >
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path fill-rule="evenodd" d="M12.017 0C8.396 0 7.956.01 6.729.058 2.491.227.213 2.5.058 6.729.01 7.956 0 8.396 0 12.017c0 3.621.01 4.061.058 5.288.169 4.238 2.442 6.516 6.671 6.671 1.227.048 1.667.058 5.288.058 3.621 0 4.061-.01 5.288-.058 4.238-.155 6.516-2.433 6.671-6.671.048-1.227.058-1.667.058-5.288 0-3.621-.01-4.061-.058-5.288C23.831 2.491 21.553.213 17.324.058 16.097.01 15.657 0 12.036 0h-.019zm-.717 1.442h.718c3.136 0 3.513.012 4.741.07 3.677.168 5.093 1.62 5.093 4.903 0 3.622-.012 4.061-.07 5.288-.168 3.677-1.62 5.093-4.903 5.093-3.622 0-4.061-.012-5.288-.07-3.677-.168-5.093-1.62-5.093-4.903 0-3.622.012-4.061.07-5.288.168-3.677 1.62-5.093 4.903-5.093zm4.003 2.058a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm-3.47 1.442a3.058 3.058 0 100 6.116 3.058 3.058 0 000-6.116z" clip-rule="evenodd" />
-            </svg>
-          </a>
-        </div>
-      </div>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-2">
+        <!-- Rest of mobile menu stays the same -->
         <a
           href="#"
-          class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+          class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
           >Home</a
         >
-
-        <div class="relative dropdown group">
+        <div class="relative">
           <button
-            class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium inline-flex items-center transition-all duration-200"
-            aria-haspopup="true"
+            id="mobile-products-button"
+            class="w-full text-left block py-3 px-4 text-base text-gray-200 hover:bg-white/10 flex justify-between items-center transition-colors duration-200"
             aria-expanded="false"
-            id="desktop-products-button"
-            aria-controls="desktop-products-menu"
+            aria-controls="mobile-products-menu"
           >
             Products
             <svg
-              class="w-4 h-4 ml-1 transition-transform duration-200"
+              class="w-5 h-5 inline transform transition-transform duration-200"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -229,184 +489,41 @@
               ></path>
             </svg>
           </button>
-          <div
-            id="desktop-products-menu"
-            class="dropdown-menu absolute left-0 top-full mt-2 w-56 glass-dropdown rounded-xl shadow-xl z-20 py-2 opacity-0 invisible transform translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0"
-            role="menu"
-          >
+          <div id="mobile-products-menu" class="hidden pl-4 bg-gray-750/50">
             <a
-              href="shower-enclosures.html"
-              class="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200 rounded-lg mx-2"
-              role="menuitem"
+              href="#shower-enclosures.html"
+              class="block py-3 px-4 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200"
               >Shower Enclosures</a
             >
             <a
-              href="glass-doors.html"
-              class="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200 rounded-lg mx-2"
-              role="menuitem"
+              href="#glass-doors.htm"
+              class="block py-3 px-4 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200"
               >Frameless Glass Doors</a
             >
             <a
-              href="partitions.html"
-              class="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200 rounded-lg mx-2"
-              role="menuitem"
+              href="#partitions.html"
+              class="block py-3 px-4 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200"
               >Partition Systems</a
             >
           </div>
         </div>
-
         <a
           href="#gallery"
-          class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+          class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
           >Gallery</a
         >
         <a
           href="#railings"
-          class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+          class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
           >Railings</a
         >
         <a
           href="#contact"
-          class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+          class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
           >Contact Us</a
         >
-      </nav>
-
-      <!-- Mobile Menu Button -->
-      <div class="md:hidden flex items-center">
-        <button
-          id="mobile-menu-button"
-          class="glass-nav-item hover-glass-nav p-2 rounded-lg transition-colors duration-200"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="h-6 w-6"
-            stroke="currentColor"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
       </div>
-    </div>
-  </div>
-
-  <!-- Mobile Menu (keep this the same) -->
-  <div
-    id="mobile-menu"
-    class="md:hidden hidden glass-dropdown border-t border-gray-700/30"
-  >
-    <!-- Mobile Contact Info -->
-    <div class="border-b border-white/10 py-4 px-4">
-      <div class="flex flex-col gap-3 text-sm">
-        <a href="tel:2672435478" class="glass-nav-item hover-glass-nav px-3 py-2 rounded-lg transition-all duration-200 flex items-center gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.308 1.154a11.06 11.06 0 006.086 6.086l1.154-2.308a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-          </svg>
-          (267) 243-5478
-        </a>
-        <a href="tel:2672524314" class="glass-nav-item hover-glass-nav px-3 py-2 rounded-lg transition-all duration-200 flex items-center gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.308 1.154a11.06 11.06 0 006.086 6.086l1.154-2.308a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-          </svg>
-          (267) 252-4314
-        </a>
-        <div class="flex items-center gap-3 pt-2">
-          <a
-            href="https://www.facebook.com/pages/KF-Megaglass-Shower-Enclosures/208668755897730"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="glass-nav-item hover-glass-nav p-2 rounded-lg transition-all duration-200"
-            aria-label="Follow us on Facebook"
-          >
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
-            </svg>
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="glass-nav-item hover-glass-nav p-2 rounded-lg transition-all duration-200"
-            aria-label="Follow us on Instagram"
-          >
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path fill-rule="evenodd" d="M12.017 0C8.396 0 7.956.01 6.729.058 2.491.227.213 2.5.058 6.729.01 7.956 0 8.396 0 12.017c0 3.621.01 4.061.058 5.288.169 4.238 2.442 6.516 6.671 6.671 1.227.048 1.667.058 5.288.058 3.621 0 4.061-.01 5.288-.058 4.238-.155 6.516-2.433 6.671-6.671.048-1.227.058-1.667.058-5.288 0-3.621-.01-4.061-.058-5.288C23.831 2.491 21.553.213 17.324.058 16.097.01 15.657 0 12.036 0h-.019zm-.717 1.442h.718c3.136 0 3.513.012 4.741.07 3.677.168 5.093 1.62 5.093 4.903 0 3.622-.012 4.061-.07 5.288-.168 3.677-1.62 5.093-4.903 5.093-3.622 0-4.061-.012-5.288-.07-3.677-.168-5.093-1.62-5.093-4.903 0-3.622.012-4.061.07-5.288.168-3.677 1.62-5.093 4.903-5.093zm4.003 2.058a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm-3.47 1.442a3.058 3.058 0 100 6.116 3.058 3.058 0 000-6.116z" clip-rule="evenodd" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <a
-      href="#"
-      class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
-      >Home</a
-    >
-    <div class="relative">
-      <button
-        id="mobile-products-button"
-        class="w-full text-left block py-3 px-4 text-base text-gray-200 hover:bg-white/10 flex justify-between items-center transition-colors duration-200"
-        aria-expanded="false"
-        aria-controls="mobile-products-menu"
-      >
-        Products
-        <svg
-          class="w-5 h-5 inline transform transition-transform duration-200"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M19 9l-7 7-7-7"
-          ></path>
-        </svg>
-      </button>
-      <div id="mobile-products-menu" class="hidden pl-4 bg-gray-750/50">
-        <a
-          href="#shower-enclosures.html"
-          class="block py-3 px-4 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200"
-          >Shower Enclosures</a
-        >
-        <a
-          href="#glass-doors.htm"
-          class="block py-3 px-4 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200"
-          >Frameless Glass Doors</a
-        >
-        <a
-          href="#partitions.html"
-          class="block py-3 px-4 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200"
-          >Partition Systems</a
-        >
-    </div>
-    <a
-      href="#gallery"
-      class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
-      >Gallery</a
-    >
-    <a
-      href="#railings"
-      class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
-      >Railings</a
-    >
-    <a
-      href="#contact"
-      class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
-      >Contact Us</a
-    >
-  </div>
-</header>
+    </header>
 
     <main class="relative z-10">
       <!-- Hero Section with Slideshow -->
@@ -449,18 +566,19 @@
             <p
               class="text-xl sm:text-2xl md:text-3xl mb-12 text-gray-200 max-w-4xl mx-auto leading-relaxed"
             >
-              Transform your space with a clean and modern new look.
-              From shower-enclosures to partition systems, balconies, railings and shelving.
+              Transform your space with a clean and modern new look. From
+              shower-enclosures to partition systems, balconies, railings and
+              shelving.
 
               <br />
 
-             <br />
+              <br />
 
               When it comes to glass
 
-              <br>
-              
-              <span class='gradient-text'>We Got You covered</span>
+              <br />
+
+              <span class="gradient-text">We Got You covered</span>
             </p>
             <a
               href="#contact"
@@ -481,17 +599,28 @@
                 <h2 class="text-4xl lg:text-5xl font-bold text-white mb-8">
                   About <span class="gradient-text">KF Megaglass</span>
                 </h2>
-<div class="space-y-6 text-gray-300 text-lg leading-relaxed">
-  <p>
-    KF Megaglassis a leading provider of premium frameless glass installations in Philadelphia and surrounding areas. We specialize in custom installations that integrate the highst qaulity hardware with with professional installations.. 
-  </p>
-  <p>
-    From residential shower enclosures to large scale commercial installationsm, we aim to create open, light-filled, and memorable spaces that transform your daily life. Our expertise spans across residential bathrooms, office partitions, and architectural glass systems.
-  </p>
-  <p>
-    We maintain an unwavering commitment to quality, using only the finest material and hardware. Ranging from brass, titanium, and marine-grade stainless steel. Every installation maintains the same commitment - Our dedication for quality within you custom space.  
-  </p>
-</div>
+                <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
+                  <p>
+                    KF Megaglassis a leading provider of premium frameless glass
+                    installations in Philadelphia and surrounding areas. We
+                    specialize in custom installations that integrate the highst
+                    qaulity hardware with with professional installations..
+                  </p>
+                  <p>
+                    From residential shower enclosures to large scale commercial
+                    installationsm, we aim to create open, light-filled, and
+                    memorable spaces that transform your daily life. Our
+                    expertise spans across residential bathrooms, office
+                    partitions, and architectural glass systems.
+                  </p>
+                  <p>
+                    We maintain an unwavering commitment to quality, using only
+                    the finest material and hardware. Ranging from brass,
+                    titanium, and marine-grade stainless steel. Every
+                    installation maintains the same commitment - Our dedication
+                    for quality within you custom space.
+                  </p>
+                </div>
               </div>
             </div>
             <div class="order-1 md:order-2">
@@ -674,7 +803,7 @@
                   ></path>
                 </svg>
               </div>
-             
+
               <p class="text-gray-400 leading-relaxed">
                 We use only the finest quality materials including solid German
                 brass, titanium, and stainless steel for all our fittings and
