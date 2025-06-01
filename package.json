@@ -1,5 +1,34 @@
 {
+  "name": "kf-megaglass",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "KF Megaglass - Premium Frameless Glass Solutions",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist",
+    "lint": "echo 'No linting configured yet'",
+    "format": "echo 'No formatting configured yet'"
+  },
+  "devDependencies": {
+    "vite": "^5.0.8",
+    "terser": "^5.16.0"
+  },
   "dependencies": {
-    "node": "^22.16.0"
-  }
+    "gsap": "^3.12.2",
+    "aos": "^2.3.1",
+    "lenis": "^1.0.42"
+  },
+  "keywords": [
+    "glass",
+    "frameless",
+    "shower-enclosures",
+    "railings",
+    "partitions",
+    "philadelphia"
+  ],
+  "author": "PK Designs",
+  "license": "MIT"
 }

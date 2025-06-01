@@ -1,0 +1,64 @@
+/* CSS Variables for KF Megaglass */
+:root {
+  /* Colors */
+  --primary-blue: #3b82f6;
+  --primary-blue-dark: #1d4ed8;
+  --secondary-blue: #60a5fa;
+  --light-blue: #93c5fd;
+
+  /* Glass morphism */
+  --glass-bg-light: rgba(255, 255, 255, 0.05);
+  --glass-bg-medium: rgba(255, 255, 255, 0.08);
+  --glass-bg-strong: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border-strong: rgba(255, 255, 255, 0.15);
+
+  /* Shadows */
+  --shadow-light: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 16px 48px rgba(0, 0, 0, 0.3);
+  --shadow-strong: 0 25px 70px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.2);
+
+  /* Typography */
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+
+  /* Border radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.4s ease;
+  --transition-glass: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-index layers */
+  --z-background: -2;
+  --z-overlay: -1;
+  --z-default: 1;
+  --z-dropdown: 20;
+  --z-header: 50;
+  --z-modal: 100;
+
+  /* Backdrop filters */
+  --blur-light: blur(10px);
+  --blur-medium: blur(15px);
+  --blur-strong: blur(20px);
+  --blur-extra: blur(25px);
+}
