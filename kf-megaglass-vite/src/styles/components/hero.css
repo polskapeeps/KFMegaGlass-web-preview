@@ -1,0 +1,136 @@
+/* Hero Section Styles */
+.hero-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  min-height: 100vh;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+/* Slideshow container */
+.hero-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+/* Individual slide backgrounds */
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+/* Active slide */
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* Dark overlay for better text readability */
+.hero-overlay,
+.hero-glass-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(1px);
+  z-index: -1;
+}
+
+/* Slide images */
+.hero-slide:nth-child(1) {
+  background-image: url('/assets/hero/railings.jpg');
+}
+
+.hero-slide:nth-child(2) {
+  background-image: url('/assets/hero/shower-5.jpg');
+}
+
+.hero-slide:nth-child(3) {
+  background-image: url('/assets/hero/shower-2.jpg');
+}
+
+.hero-slide:nth-child(4) {
+  background-image: url('/assets/hero/variety.jpg');
+}
+
+.hero-slide:nth-child(5) {
+  background-image: url('/assets/hero/balustrade.jpg');
+}
+
+/* Slideshow indicators */
+.slideshow-indicators {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Glass indicators */
+.glass-indicator {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border: 2px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.glass-indicator.active {
+  background: rgba(59, 130, 246, 0.9) !important;
+  border-color: white !important;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+}
+
+/* Hero text improvements */
+.glass-card-hero h1,
+.glass-card-hero p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
+}
+
+.glass-card-hero h1 {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .hero-bg {
+    background-attachment: scroll;
+  }
+
+  .hero-slide {
+    background-attachment: scroll;
+  }
+}
