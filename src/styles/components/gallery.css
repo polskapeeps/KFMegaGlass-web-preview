@@ -1,0 +1,140 @@
+/* Gallery Section Styles */
+#gallery {
+  position: relative;
+}
+
+#gallery::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(
+    45deg,
+    rgba(59, 130, 246, 0.03),
+    rgba(29, 78, 216, 0.03)
+  );
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+#gallery > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Gallery items */
+.gallery-item {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.gallery-item:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  transform: scale(1.03) rotate(0.5deg);
+  box-shadow: 0 25px 70px rgba(59, 130, 246, 0.2);
+}
+
+/* Remove the blue overlay */
+.gallery-item::after {
+  display: none !important;
+}
+
+/* Gallery item images */
+.gallery-item img {
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Staggered animation delays */
+.gallery-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.gallery-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.gallery-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.gallery-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.gallery-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.gallery-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Contact Section */
+#contact {
+  position: relative;
+}
+
+#contact::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(
+    45deg,
+    rgba(147, 197, 253, 0.03),
+    rgba(96, 165, 250, 0.03)
+  );
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+#contact > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Contact cards */
+.contact-card {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4) !important;
+}
+
+.contact-card .glass-card {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(59, 130, 246, 0.2) !important;
+  transition: all 0.3s ease;
+}
+
+.contact-card .glass-card:hover {
+  background: rgba(59, 130, 246, 0.1) !important;
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}

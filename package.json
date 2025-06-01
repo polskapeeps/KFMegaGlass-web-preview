@@ -9,7 +9,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    "build:deploy": "npm run clean && npm run build && npm run deploy",
     "lint": "echo 'No linting configured yet'",
     "format": "echo 'No formatting configured yet'"
   },

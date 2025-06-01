@@ -1,0 +1,71 @@
+/* Header Styles */
+.glass-header {
+  background: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-nav-item {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+}
+
+.hover-glass-nav:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  transform: translateY(-1px);
+}
+
+/* Desktop dropdown menu */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+}
+
+.glass-dropdown {
+  background: rgba(0, 0, 0, 0.9) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile menu */
+#mobile-menu {
+  background: rgba(0, 0, 0, 0.9) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+#mobile-menu a {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.9), -1px -1px 0px rgba(0, 0, 0, 0.9),
+    1px -1px 0px rgba(0, 0, 0, 0.9), -1px 1px 0px rgba(0, 0, 0, 0.9),
+    3px 3px 6px rgba(0, 0, 0, 0.8) !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 500 !important;
+}
+
+/* Mobile products dropdown arrow rotation */
+#mobile-products-button[aria-expanded='true'] svg {
+  transform: rotate(180deg);
+}
+
+/* Enhanced backdrop blur support */
+@supports (backdrop-filter: blur(10px)) {
+  .backdrop-blur-header {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
